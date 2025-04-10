@@ -1,0 +1,876 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  padding-top: 4em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .hero-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0rem 1.5rem;
+}
+main .hero-text .image-text {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .hero-text .image-text img {
+  width: 100%;
+}
+main .hero-text .text {
+  font-family: monospace;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+main .hero-contenar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1.5rem 1.5rem;
+}
+main .hero-contenar .top {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .hero-contenar .top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .hero-contenar .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .hero-contenar .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .hero-contenar .bottom .text h1 {
+  font-size: 2.7em;
+  font-weight: 350;
+  line-height: 1;
+  text-transform: uppercase;
+}
+main .hero-contenar .bottom .text p {
+  font-size: 1.2em;
+  font-family: monospace;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+main .hero-contenar .bottom .services {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+main .hero-contenar .bottom .services .service {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .hero-contenar .bottom .services .service p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  font-weight: 450;
+}
+main .verticale-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1rem 1.5rem 3rem 1.5rem;
+}
+main .verticale-text .top {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+main .verticale-text .top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .verticale-text .bottom {
+  display: flex;
+  gap: 2em;
+}
+main .verticale-text .bottom p {
+  font-size: 0.8em;
+  writing-mode: vertical-rl;
+  opacity: 0.7;
+  padding-top: 0.7em;
+  text-transform: uppercase;
+  word-spacing: 0.4em;
+}
+main .verticale-text .bottom .text h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 400;
+}
+main .verticale-text .bottom .text p {
+  text-transform: initial;
+  writing-mode: initial;
+  line-height: 1.5;
+  font-size: 1.4em;
+  font-family: monospace;
+  opacity: 0.5;
+  word-spacing: initial;
+}
+main .our-services {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+  padding: 1rem 1.5rem 3rem 1.5rem;
+}
+main .our-services .top {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+main .our-services .top .heading h1 {
+  font-size: 3.1em;
+  text-transform: uppercase;
+  font-weight: 350;
+  line-height: 1;
+}
+main .our-services .top .services {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .our-services .top .services .service {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+}
+main .our-services .top .services .service .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+main .our-services .top .services .service .text h1 {
+  text-transform: uppercase;
+  font-size: 1.6em;
+  font-weight: 400;
+}
+main .our-services .top .services .service .text p {
+  font-size: 1.2em;
+  font-family: monospace;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  opacity: 0.5;
+}
+main .our-services .top .services .service .about {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8em;
+  align-items: center;
+}
+main .our-services .top .services .service .about svg {
+  aspect-ratio: 1/1;
+  background-color: black;
+  color: bisque;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0.5em;
+}
+main .our-services .top .services .service .about p {
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+main .our-services .bottom-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+main .our-services .bottom-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .selected-work {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 3rem 1.5rem 3rem 1.5rem;
+}
+main .selected-work .top-image {
+  width: 100%;
+}
+main .selected-work .top-image img {
+  width: 100%;
+}
+main .selected-work .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+main .selected-work .cards .card-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .selected-work .cards .card-1 .hero-top-image-1 {
+  width: 100%;
+}
+main .selected-work .cards .card-1 .hero-top-image-1 img {
+  width: 100%;
+}
+main .selected-work .cards .card-1 .hero-top-image-2 {
+  display: none;
+}
+main .selected-work .cards .card-1 .hero-top-image-2 .img2 {
+  width: 100%;
+  display: none;
+}
+main .selected-work .cards .card-1 .bottom-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .selected-work .cards .card-1 .bottom-text h1 {
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+main .selected-work .cards .card-1 .bottom-text p {
+  font-size: 1.2em;
+  font-family: monospace;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+main .selected-work .cards .card-1 .bottom-text .discover {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8em;
+  align-items: center;
+}
+main .selected-work .cards .card-1 .bottom-text .discover svg {
+  aspect-ratio: 1/1;
+  background-color: black;
+  color: bisque;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0.5em;
+}
+main .selected-work .cards .card-1 .bottom-text .discover p {
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+main .selected-work .cards .card-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .selected-work .cards .card-2 .hero-top-image-1 {
+  width: 100%;
+}
+main .selected-work .cards .card-2 .hero-top-image-1 img {
+  width: 100%;
+}
+main .selected-work .cards .card-2 .hero-top-image-2 {
+  display: none;
+}
+main .selected-work .cards .card-2 .hero-top-image-2 .img2 {
+  width: 100%;
+  display: none;
+}
+main .selected-work .cards .card-2 .bottom-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .selected-work .cards .card-2 .bottom-text h1 {
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-weight: 400;
+}
+main .selected-work .cards .card-2 .bottom-text p {
+  font-size: 1.2em;
+  font-family: monospace;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+main .selected-work .cards .card-2 .bottom-text .discover {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8em;
+  align-items: center;
+}
+main .selected-work .cards .card-2 .bottom-text .discover svg {
+  aspect-ratio: 1/1;
+  background-color: black;
+  color: bisque;
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0.5em;
+}
+main .selected-work .cards .card-2 .bottom-text .discover p {
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+main .clients {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1rem 1.5rem 4rem 1.5rem;
+}
+main .clients #top {
+  display: none;
+}
+main .clients .bottom-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .clients .bottom-text .top-image img {
+  width: 100%;
+}
+main .clients .bottom-text .clients-deta {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .clients .bottom-text .clients-deta .year-city {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+main .clients .bottom-text .clients-deta .year-city div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+main .clients .bottom-text .clients-deta .year-city div p {
+  font-size: 1.2em;
+  font-family: monospace;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+main .clients .bottom-text .clients-deta .year-city div h1 {
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 350;
+}
+main .clients .bottom-text .clients-deta .year-city p {
+  font-size: 1.2em;
+  font-family: monospace;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+main .team {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem 4rem 1.5rem;
+  gap: 3em;
+}
+main .team .top-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+}
+main .team .top-heading h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 350;
+}
+main .team .top-heading p {
+  font-size: 1.4em;
+  font-family: monospace;
+  line-height: 1.5;
+  word-spacing: 0.5em;
+  opacity: 0.8;
+}
+main .team .bottom-sec {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+main .team .bottom-sec .team-members {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main .team .bottom-sec .team-members h1 {
+  font-size: 1.7em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+main .team .bottom-sec .team-members .image img {
+  width: 100%;
+}
+main .team .bottom-sec .team-members .crative {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.4em;
+}
+main .team .bottom-sec .team-members .crative p {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+  opacity: 0.9;
+}
+main .team .bottom-sec .team-members .crative .icon {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6em;
+}
+main .team .bottom-sec .team-members p {
+  font-size: 1.4em;
+  font-family: monospace;
+  line-height: 1.5;
+  word-spacing: 0.5em;
+  opacity: 0.4;
+}
+main .team .join-the-team {
+  display: flex;
+  flex-direction: column;
+}
+main .team .join-the-team #fist {
+  display: none;
+}
+main .team .join-the-team .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+main .team .join-the-team .bottom .top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .team .join-the-team .bottom .top-text p {
+  text-transform: uppercase;
+  font-size: 1.1em;
+  font-family: monospace;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+main .team .join-the-team .bottom .top-text h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 350;
+}
+main .team .join-the-team .bottom .find-job {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  align-items: center;
+}
+main .team .join-the-team .bottom .find-job p {
+  text-transform: uppercase;
+}
+main .team .join-the-team .bottom .find-job svg {
+  aspect-ratio: 1/1;
+  background-color: black;
+  color: bisque;
+  border-radius: 50%;
+  width: 2.2em;
+  height: 2.2em;
+  padding: 0.5em;
+}
+main .footer {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 4rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+main .footer .top-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+}
+main .footer .top-text h1 {
+  font-size: 3.7em;
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 0.012em;
+}
+main .footer .top-text p {
+  text-align: center;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+main .footer .touch {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  background-color: #ffffff;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2em;
+}
+main .footer .touch p {
+  font-family: monospace;
+  text-align: initial;
+  font-size: 1.2em;
+  opacity: 0.8;
+}
+
+@media (min-width: 900px) {
+  html,
+  body {
+    font-size: clamp(16px, 1vw, 20px);
+  }
+  main {
+    padding-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  main .hero-text {
+    padding: 0rem 4rem;
+  }
+  main .hero-text .text {
+    font-size: 0.9em;
+  }
+  main .hero-contenar {
+    width: 100%;
+    padding: 3rem 4rem 0rem 4rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  main .hero-contenar .top {
+    aspect-ratio: 1/1.1;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    width: 50%;
+  }
+  main .hero-contenar .bottom {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+  }
+  main .hero-contenar .bottom .text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  main .hero-contenar .bottom .text h1 {
+    font-size: 5em;
+    line-height: 0.9;
+  }
+  main .hero-contenar .bottom .text p {
+    font-size: 1.5em;
+    line-height: 1.3;
+  }
+  main .hero-contenar .bottom .services {
+    margin-top: auto;
+  }
+  main .hero-contenar .bottom .services .service p {
+    font-size: 2em;
+  }
+  main .verticale-text {
+    padding: 3rem 4rem 0rem 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+  }
+  main .verticale-text .top {
+    width: 35%;
+  }
+  main .verticale-text .bottom {
+    width: 65%;
+    flex-direction: row-reverse;
+    padding: 1em;
+  }
+  main .verticale-text .bottom p {
+    font-size: 0.8em;
+  }
+  main .verticale-text .bottom .text {
+    display: flex;
+    flex-direction: column;
+  }
+  main .verticale-text .bottom .text h1 {
+    font-size: 6em;
+    line-height: 0.9;
+  }
+  main .verticale-text .bottom .text p {
+    margin-top: auto;
+    line-height: 1.1;
+  }
+  main .our-services {
+    padding: 8rem 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
+    width: 100%;
+  }
+  main .our-services .top {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    width: 50%;
+  }
+  main .our-services .top .heading h1 {
+    font-size: 6.7rem;
+    line-height: 0.9;
+  }
+  main .our-services .top .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main .our-services .bottom-image {
+    width: 50%;
+    aspect-ratio: 1/1;
+  }
+  main .selected-work {
+    padding: 4rem 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+  }
+  main .selected-work .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  main .selected-work .cards .card-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+  }
+  main .selected-work .cards .card-1 .hero-top-image-1 {
+    width: 33%;
+    aspect-ratio: 1/1;
+  }
+  main .selected-work .cards .card-1 .hero-top-image-2 {
+    display: initial;
+    width: 33%;
+    aspect-ratio: 1/1;
+  }
+  main .selected-work .cards .card-1 .hero-top-image-2 .img2 {
+    display: initial;
+  }
+  main .selected-work .cards .card-1 .bottom-text {
+    width: 33%;
+    padding: 2rem;
+  }
+  main .selected-work .cards .card-1 .bottom-text h1 {
+    font-size: 4em;
+  }
+  main .selected-work .cards .card-1 .bottom-text p {
+    font-size: 1em;
+  }
+  main .selected-work .cards .card-1 .bottom-text .discover {
+    margin-top: auto;
+  }
+  main .selected-work .cards .card-1 .bottom-text .discover p {
+    font-size: 1.1em;
+  }
+  main .selected-work .cards .card-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2em;
+  }
+  main .selected-work .cards .card-2 .hero-top-image-1 {
+    width: 33%;
+    aspect-ratio: 1/1;
+  }
+  main .selected-work .cards .card-2 .hero-top-image-2 {
+    display: initial;
+    width: 33%;
+    aspect-ratio: 1/1;
+  }
+  main .selected-work .cards .card-2 .hero-top-image-2 .img2 {
+    display: initial;
+  }
+  main .selected-work .cards .card-2 .bottom-text {
+    width: 33%;
+    padding: 2rem;
+  }
+  main .selected-work .cards .card-2 .bottom-text h1 {
+    font-size: 4em;
+  }
+  main .selected-work .cards .card-2 .bottom-text p {
+    font-size: 1em;
+  }
+  main .selected-work .cards .card-2 .bottom-text .discover {
+    margin-top: auto;
+  }
+  main .selected-work .cards .card-2 .bottom-text .discover p {
+    font-size: 1.1em;
+  }
+  main .clients {
+    padding: 4rem 4rem 10rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-column-gap: 3rem;
+    grid-auto-columns: 1fr;
+  }
+  main .clients #top {
+    display: initial;
+  }
+  main .clients .bottom-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+  }
+  main .clients .bottom-text .top-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main .clients .bottom-text .clients-deta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  main .clients .bottom-text .clients-deta .year-city {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .clients .bottom-text .clients-deta .year-city div {
+    display: flex;
+    flex-direction: row;
+    gap: 2.7em;
+    align-items: center;
+  }
+  main .clients .bottom-text .clients-deta .year-city div p {
+    font-size: 1em;
+  }
+  main .team {
+    width: 100%;
+    padding: 0rem 4rem 10rem 4rem;
+  }
+  main .team .top-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 4rem;
+    padding: 3rem 0rem;
+  }
+  main .team .top-heading h1 {
+    width: 50%;
+    font-size: 9em;
+    line-height: 1;
+  }
+  main .team .top-heading p {
+    width: 50%;
+    font-size: 1.2em;
+  }
+  main .team .bottom-sec {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 4rem;
+    width: 100%;
+  }
+  main .team .bottom-sec .team-members h1 {
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+  }
+  main .team .bottom-sec .team-members .crative p {
+    font-size: 0.6em;
+    letter-spacing: initial;
+    padding-top: initial;
+  }
+  main .team .bottom-sec .team-members .crative .icon {
+    gap: 0.3em;
+  }
+  main .team .bottom-sec .team-members p {
+    font-size: 1.1em;
+    word-spacing: initial;
+    padding-top: 1em;
+  }
+  main .team .join-the-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem 0rem 0rem 0rem;
+    gap: 4rem;
+  }
+  main .team .join-the-team #fist {
+    display: initial;
+  }
+  main .team .join-the-team .bottom {
+    gap: 3rem;
+  }
+  main .team .join-the-team .bottom .top-text p {
+    font-size: 0.9em;
+  }
+  main .team .join-the-team .bottom .top-text h1 {
+    font-size: 4.3em;
+  }
+  main .team .join-the-team .bottom .find-job p {
+    font-size: 0.9em;
+    font-family: monospace;
+  }
+  main .footer {
+    gap: 3.5rem;
+    padding: 8rem 1.5rem;
+    width: 100%;
+  }
+  main .footer .top-text {
+    gap: 2rem;
+  }
+  main .footer .top-text h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 12em;
+    line-height: 1;
+  }
+  main .footer .top-text p {
+    width: 70%;
+    font-size: 4em;
+  }
+}

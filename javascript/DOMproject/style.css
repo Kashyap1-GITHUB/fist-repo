@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing : border-box;
+    font-family : gilroy;
+}
+html,
+body {
+     height: 100%;
+     width: 100%;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#card{
+  height: 400px;
+  width: 300px;
+  background-color: wheat;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#img1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+#card i{
+  font-size: 70px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%) scale(0);
+   opacity: 0.8;
+   transition: all ease 0.2s;
+   color: red;
+}
