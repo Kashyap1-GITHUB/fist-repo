@@ -16,7 +16,7 @@ while(i<j){
 if(ispalidrom) console.log(Str+" is palidrom");
 else console.log(Str+" is not palidrom");
 */
-
+/*
 const Prompt = require("prompt-sync")();
 
 let Str = Prompt("Enter a String:");
@@ -35,3 +35,17 @@ for (let i = 0; i < Str.length; i++) {
   }
 }
 console.log(ans);
+*/
+
+/*
+let Str = ["Stading","Station","Stpotion","Statarwr"];
+
+let s = "St";
+let count = 0
+for(let i =0 ; i < Str.length;i++){
+  if (Str[i].startsWith(s)) {
+    count ++;
+  }
+}
+console.log(count);
+*/
