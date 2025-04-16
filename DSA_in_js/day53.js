@@ -39,3 +39,49 @@ while (true) {
   n = sum;
 }
   */
+
+
+ /*
+  This method is non-mutating, meaning the original array remains unchanged.
+
+set(): Adds a new key-value pair to the Map.
+get(): Retrieves the value associated with a key.
+has(): Checks if a key exists in the Map.
+delete(): Removes a key-value pair from the Map.
+clear(): Removes all entries from the Map.
+entries(): Returns an iterator of [key, value] pairs.
+keys(): Returns an iterator of keys.
+values(): Returns an iterator of values.
+forEach(): Executes a provided function once for each key-value pair in the Map.
+
+
+let map = new Map();
+
+map.set("Name","kashyap")
+map.set("Name","rahul")
+map.set("id",44)
+
+// console.log(map);
+// console.log(map.get("id"));
+// console.log(map.keys("id"));
+// console.log(map.values("id"));
+
+for(let a of map){
+console.log(a);
+
+}
+*/
+
+
+let arr = [1, 1, 3, 4, 5, 3, 4, 5,5,5,5,5,5,5,5];
+let map = new Map();
+for (let i = 0; i < arr.length; i++) {
+  if(map.has(arr[i])){
+    map.set(arr[i],map.get(arr[i])+1)
+  }
+  else{
+    map.set(arr[i],1);
+  }
+}
+console.log(map);
+
