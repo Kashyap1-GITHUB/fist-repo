@@ -66,3 +66,4 @@ for(let i =0 ; i <heights.length ;i++){
 console.log(ans);
 
 // console.log(map);
+ 
