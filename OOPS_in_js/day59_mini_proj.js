@@ -59,7 +59,7 @@ class MobileShope{
         this.Mobile = [];
     }
 
-    AddMobile(...Mobile){
+    AddMobile(Mobile){
         this.Mobile.push(...Mobile);
     }
 
@@ -117,8 +117,8 @@ class Sim{
 
 let mshope = new MobileShope();
 
-mshope.AddMobile("sumsung")
-mshope.AddMobile("Realme")
+// mshope.AddMobile("sumsung")
+// mshope.AddMobile("Realme")
 mshope.LishtMobile()
 
 let m1 = new Mobiles("sumsung","s27 Ultra",1500000,"256GB","6000MAH")
@@ -130,10 +130,10 @@ mshope.AddMobile([m1,m2])
 mshope.LishtMobile()
 
 m1.insetsim(2)   
+m2.insetsim(1)   
 
 
 let s1 = new Sim("jio",2560);
 
 s1.addRecharge(250);
 
-s1.Recharge()
