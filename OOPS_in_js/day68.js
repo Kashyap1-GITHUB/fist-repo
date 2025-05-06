@@ -27,12 +27,12 @@ function creatcard(cdata) {
             </div>
             <div class="info">
                 <p>${cdata.login}</p>
-                <p>Public repo:${cdata.public_repos ? cdata.public_repos : ""}</p>
-                <p>Follower:${cdata.followers}</p>
-                <p>Following:${cdata.following}</p>
-                <p>Location:${cdata.location ? cdata.location : ""}</p>
-                <p>Company:${cdata.company ? cdata.company : ""}</p>
-                <p>Blog:${cdata.blog ? cdata.blog : ""}</p>
+                <p>Public repo: ${cdata.public_repos ? cdata.public_repos : ""}</p>
+                <p>Follower: ${cdata.followers}</p>
+                <p>Following: ${cdata.following}</p>
+                <p>Location: ${cdata.location ? cdata.location : ""}</p>
+                <p>Company: ${cdata.company ? cdata.company : ""}</p>
+                <p>Blog: ${cdata.blog ? cdata.blog : ""}</p>
                </div>
                </div>`;
 
@@ -40,7 +40,8 @@ function creatcard(cdata) {
 }
 
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (event) => {
+  event.preventDefault();
   let value = inputField.value.trim();
   if (value.length > 0) {
     getuser(value).then(function (data) {
