@@ -1,4 +1,6 @@
-import React from "react";
+import { useState } from "react";
+import Read from "./component/Read";
+import Creat from "./component/Creat";
 
 const App = () => {
   // let num = 70;
@@ -13,30 +15,15 @@ const App = () => {
 
   // let arr = [70, "kashyap", true, null, <h1>Hello World</h1>];
 
-  let obj = [
-    {
-      Name: "kashyap",
-      age: 21,
-    },
-    {
-      Name: "Rahul",
-      age: 22,
-    },
-    {
-      Name: "sandip",
-      age: 23,
-    },
-  ];
 
-  let pro = obj.map((Profile ,  index) => {
-    console.log(Profile,index);
-    return (
-      <li key = {index}>
-        <span>Name : {Profile.Name}
-          ,Age :{Profile.age}</span>
-      </li>
-    )
-  })
+ 
+  
+const [user, setuser] = useState([
+    { Name: "kashyap", age: 21 },
+    { Name: "Rahul", age: 22 },
+    { Name: "sandip", age: 23 },
+  ])
+
   return (
     <>
       {/* <h1>Datatype</h1>
@@ -45,10 +32,15 @@ const App = () => {
       <h1>Boolean: {boo} </h1>
       <h1>Null : {n} </h1>
       <h1>Undfined : {un} </h1>
-      <h1>Array : {arr} </h1> */}
-      {/* <h1>obj : {obj.Name | obj.age} </h1> */}
-     <ol>{pro}</ol>
+      <h1>Array : {arr} </h1>                 
+      <h1>obj : {obj.Name | obj.age} </h1>*/}
+
+    <Creat/>
+
+    <Read user={user} setuser ={setuser}  />
+    
     </>
   );
 };
 export default App;
+
