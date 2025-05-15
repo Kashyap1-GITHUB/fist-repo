@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function Read(props) {
-    console.log(props);
+  console.log(props);
 
-    const user = props.user 
-    // const setuser = props.setuser 
-    
-    let pro = user.map((Profile, index) => {
+  const user = props.user;
+  // const setuser = props.setuser
+
+  let pro = user.map((Profile, index) => {
     console.log(Profile, index);
     return (
       <li key={index}>
@@ -18,12 +18,10 @@ function Read(props) {
     );
   });
 
-
   return (
     <div>
       <ol>{pro}</ol>
     </div>
-  )
+  );
 }
-export default Read
-
+export default Read;

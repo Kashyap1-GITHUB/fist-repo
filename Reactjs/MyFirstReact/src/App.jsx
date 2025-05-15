@@ -15,14 +15,11 @@ const App = () => {
 
   // let arr = [70, "kashyap", true, null, <h1>Hello World</h1>];
 
-
- 
-  
-const [user, setuser] = useState([
+  const [user, setuser] = useState([
     { Name: "kashyap", age: 21 },
     { Name: "Rahul", age: 22 },
     { Name: "sandip", age: 23 },
-  ])
+  ]);
 
   return (
     <>
@@ -35,12 +32,12 @@ const [user, setuser] = useState([
       <h1>Array : {arr} </h1>                 
       <h1>obj : {obj.Name | obj.age} </h1>*/}
 
-    <Creat/>
+      <Creat />
 
-    <Read user={user} setuser ={setuser}  />
-    
+      <Read user={user} setuser={setuser} />
     </>
   );
 };
 export default App;
 
+//  rafce
