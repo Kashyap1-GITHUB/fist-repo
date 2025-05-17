@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { nanoid } from "nanoid";
 import Creat from "./Component-todo/Creat";
 import Read from "./Component-todo/Read";
 const Apptodo = () => {
@@ -9,7 +8,7 @@ const Apptodo = () => {
 
  
   return (
-    <div>
+    <div className="h-screen w-screen bg-zinc-600 flex p-10">
      <Creat Todolist={Todolist} setTodolist = {setTodolist} />
      <Read Todolist={Todolist} setTodolist = {setTodolist} />
     </div>
