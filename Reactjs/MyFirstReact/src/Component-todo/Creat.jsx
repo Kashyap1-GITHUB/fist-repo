@@ -1,10 +1,11 @@
 import { nanoid } from "nanoid";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { todocontext } from "../Wrapper";
 
-const Creat = (props) => {
-  const Todolist = props.Todolist;
-  const setTodolist = props.setTodolist;
+const Creat = () => {
+const [Todolist, setTodolist] =  useContext(todocontext)
 
   const {
     register,
