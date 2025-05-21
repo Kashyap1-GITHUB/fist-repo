@@ -1,13 +1,15 @@
 import { createRoot } from "react-dom/client";
 
-import App from "./Apptodo.jsx";
-import "./index.css";
-import { ToastContainer } from "react-toastify";
-import Wrapper from "./Wrapper.jsx";
+import App from "./AppRout.jsx";
+import "./index.css"; 
+import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 createRoot(document.getElementById("root")).render(
-  <Wrapper>
+ 
+
+   <BrowserRouter>
     <App />
-    <ToastContainer position="top-center"/>
-  </Wrapper>
+  </BrowserRouter>
 );
