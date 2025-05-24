@@ -1,10 +1,9 @@
-import React from "react";
-import MainRoute from "./Manageroutes/MainRoute";
-import Nav from "./RoutComponent/Nav";
+import Nav from "./pages/Nav";
+import MainRoute from "./Routes/MainRoute";
 
 const AppRout = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-10 bg-black h-screen w-screen text-white px-10 py-10 align-middle justify-baseline">
       <Nav />
       <MainRoute />
     </div>
