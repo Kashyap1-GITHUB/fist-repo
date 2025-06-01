@@ -1,17 +1,15 @@
 import React, { use, useContext } from 'react'
 import { recipescontext } from '../data/Recepiescontext'
+import CardRespies from './CardRespies';
 
 const Recipies = () => {
  const [info]  = useContext(recipescontext);
 
- const redata = info.map((recipe) => (
-   <div key={recipe.id}>
-          <h3>{recipe.Url}</h3>
-          <p>{recipe.Title}</p>
-        </div>
+ const redata = info.map((recipes) => (
+<CardRespies key= {recipes.id} recipes = {recipes} />
  ))
   return (
-    <div>{redata}</div>
+    <div className='flex gap-3' >{redata}</div>
   )
 }
 

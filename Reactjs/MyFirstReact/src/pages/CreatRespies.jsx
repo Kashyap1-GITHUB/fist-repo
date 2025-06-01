@@ -2,9 +2,14 @@ import { nanoid } from "nanoid";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { recipescontext } from "../data/Recepiescontext";
+import {  toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
+
 
 const CreatRespies = () => {
   const [info, setinfo] = useContext(recipescontext);
+
+ const navigate =  useNavigate()
 
   const {
     register,
@@ -20,7 +25,11 @@ const CreatRespies = () => {
     copy.push(data);
     setinfo(copy);
 
+    toast.success("recipes created")
+
     reset(); // clears form after submission
+
+    navigate('/Recipies')
   };
   console.log(info);
 
@@ -39,34 +48,33 @@ const CreatRespies = () => {
 
       <div className="py-3">
         <input
-          {...register("Title", { required: "Title is required for Racipies" })}
+          {...register("title", { required: "title is required for Racipies" })}
           type="text"
           placeholder="Recipies Tital"
           className=" rounded-2xl px-4 py-2 w-[50%] border-b-1 text-white"
         />
-        {errors.Title && <p className="text-red-600">{errors.Title.message}</p>}
+       
       </div>
       <div className="py-3">
         <input
           {...register("ChafeName", {
-            required: "Title is required for Racipies",
+            required: "ChafeName is required for Racipies",
           })}
           type="text"
           placeholder="Chafe Name"
           className=" rounded-2xl px-4 py-2 w-[50%] border-b-1 text-white"
         />
-        {errors.ChafeName && (
-          <p className="text-red-600">{errors.ChafeName.message}</p>
-        )}
+      
       </div>
       <div className="py-3">
-        <input
-          {...register("description", { required: "Enter star from dice" })}
-          type="text"
-          placeholder="Star from here"
-          className=" rounded-2xl px-4 py-2 w-[50%] border-b-1 text-white"
-        />
-        {errors.description && <p className="text-red-600">{errors.description.message}</p>}
+        <textarea 
+          {...register("description", { required: "Enter star from discription" })}
+          type="textarea"
+          placeholder="Discription"
+          className="rounded-2xl px-4 py-2 w-[50%] border-b-1 text-white"
+        >
+        </textarea>
+    
       </div>
       <div className="py-3">
         <input
@@ -77,9 +85,7 @@ const CreatRespies = () => {
           placeholder="write ingredients seperated by comma"
           className=" rounded-2xl px-4 py-2 w-[50%] border-b-1 text-white"
         />
-        {errors.ingredients && (
-          <p className="text-red-600">{errors.ingredients.message}</p>
-        )}
+        
       </div>
       <div className="py-3">
         <input
@@ -90,25 +96,20 @@ const CreatRespies = () => {
           placeholder="write instructions seperated by commaa"
           className=" rounded-2xl px-4 py-2 w-[50%] border-b-1 text-white"
         />
-        {errors.instructions && (
-          <p className="text-red-600">{errors.instructions.message}</p>
-        )}
       </div>
       <div className="py-3">
         <select
           name="Dicess"
           className="bg-white text-black rounded text-[1.3rem]"
-          {...register("country", { required: "plz chuse country" })}
+          {...register("category", { required: "plz chuse category" })}
           id=""
         >
-          <option value="indian">indian</option>
-          <option value="italy">italy</option>
-          <option value="US">US</option>
-          <option value="new lande">New lande</option>
+          <option value="lunch">lunch</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="supper">supper</option>
+          <option value="dinner">dinner</option>
 
-          {errors.country &&
-            errors.country.message &&
-            console.log(errors.country.message)}
+       
         </select>
       </div>
 
