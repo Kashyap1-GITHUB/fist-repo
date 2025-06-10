@@ -26,6 +26,12 @@ const Nav = () => {
         >
         <button className="px-4 py-2 bg-gray-700 rounded-1xl">  Creat Respies</button>
         </NavLink>
+        <NavLink
+          className={(e) => (e.isActive ? "text-blue-500 " : "")}
+          to="/Fav"
+        >
+          Favroite
+        </NavLink>
       </div>
     </div>
   );

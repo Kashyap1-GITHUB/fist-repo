@@ -4,6 +4,8 @@ import About from "../pages/About"
 import Recipies from "../pages/Recipies"
 import CreatRespies from "../pages/CreatRespies"
 import Singleditails from "../pages/Singleditails"
+import Pagenotfound from "../pages/pagenotfound"
+import Fav from "../pages/Fav";
 
 
 
@@ -16,6 +18,8 @@ const MainRoute = () => {
       <Route path="//recipe/detail/:id" element={<Singleditails/>}/>
       <Route path="/about" element={<About/>}/>
       <Route path="/CreatRespies" element={<CreatRespies/>}/>
+      <Route path="/Fav" element={<Fav/>}/>
+      <Route path="*" element={<Pagenotfound/>}/>
     </Routes>
 
   </>

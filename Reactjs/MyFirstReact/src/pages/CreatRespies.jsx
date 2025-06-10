@@ -2,14 +2,13 @@ import { nanoid } from "nanoid";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { recipescontext } from "../data/Recepiescontext";
-import {  toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-
 
 const CreatRespies = () => {
   const [info, setinfo] = useContext(recipescontext);
 
- const navigate =  useNavigate()
+  const navigate = useNavigate();
 
   const {
     register,
@@ -18,24 +17,24 @@ const CreatRespies = () => {
     reset,
   } = useForm();
 
-  const onSubmit = (data, index) => {
-    data.id = nanoid();
+  const onSubmit = (recipe) => {
+    recipe.id = nanoid();
 
     const copy = [...info];
-    copy.push(data);
+    copy.push(recipe);
+    localStorage.setItem("recipe", JSON.stringify(copy));
     setinfo(copy);
 
-    toast.success("recipes created")
+    toast.success("new recipes created");
 
     reset(); // clears form after submission
 
-    navigate('/Recipies')
+    navigate("/Recipies");
   };
   console.log(info);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className=" rounded-2xl px-20 ">
-      
       <div className="py-3">
         <input
           {...register("image", { required: "Url is required" })}
@@ -43,7 +42,9 @@ const CreatRespies = () => {
           placeholder="Enter Image Url"
           className=" rounded-2xl px-4 py-2 w-[50%] border-b-1 text-white"
         />
-        {errors.image && <p className="text-red-600  ">{errors.image.message}</p>}
+        {errors.image && (
+          <p className="text-red-600  ">{errors.image.message}</p>
+        )}
       </div>
 
       <div className="py-3">
@@ -53,7 +54,6 @@ const CreatRespies = () => {
           placeholder="Recipies Tital"
           className=" rounded-2xl px-4 py-2 w-[50%] border-b-1 text-white"
         />
-       
       </div>
       <div className="py-3">
         <input
@@ -64,17 +64,16 @@ const CreatRespies = () => {
           placeholder="Chafe Name"
           className=" rounded-2xl px-4 py-2 w-[50%] border-b-1 text-white"
         />
-      
       </div>
       <div className="py-3">
-        <textarea 
-          {...register("description", { required: "Enter star from discription" })}
+        <textarea
+          {...register("description", {
+            required: "Enter star from discription",
+          })}
           type="textarea"
           placeholder="Discription"
           className="rounded-2xl px-4 py-2 w-[50%] border-b-1 text-white"
-        >
-        </textarea>
-    
+        ></textarea>
       </div>
       <div className="py-3">
         <input
@@ -85,7 +84,6 @@ const CreatRespies = () => {
           placeholder="write ingredients seperated by comma"
           className=" rounded-2xl px-4 py-2 w-[50%] border-b-1 text-white"
         />
-        
       </div>
       <div className="py-3">
         <input
@@ -108,8 +106,6 @@ const CreatRespies = () => {
           <option value="Breakfast">Breakfast</option>
           <option value="supper">supper</option>
           <option value="dinner">dinner</option>
-
-       
         </select>
       </div>
 
